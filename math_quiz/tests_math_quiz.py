@@ -4,7 +4,7 @@ from math_quiz import get_integer, get_random_operator, get_expression
 
 class TestMathQuizFunctions(unittest.TestCase):
 
-    def test_generate_random_integer(self):
+    def test_integer(self):
         # Test if random integers generated are within the specified range
         min_val = 1
         max_val = 10
@@ -12,14 +12,14 @@ class TestMathQuizFunctions(unittest.TestCase):
             rand_num = get_integer(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val, "Random integer out of bounds")
 
-    def test_generate_random_operator(self):
+    def test_operator(self):
         # Test if generated operator is one of the allowed operators
         allowed_operators = ['+', '-', '*']
         for _ in range(100):  # Test multiple times for randomness
             operator = get_random_operator()
             self.assertIn(operator, allowed_operators, "Generated operator is not among '+', '-', '*'")
 
-    def test_calculate_expression(self):
+    def test_expression(self):
         # Define test cases for get_expression function
         test_cases = [
             (5, 2, '+', '5 + 2', 3),  # Intentional "incorrect" answer logic
