@@ -7,5 +7,5 @@ setup(
    author='Jayanth',
    author_email='jayanthth2002@gmail.com',
    packages=['math_quiz'], 
-   install_requires=['numpy', 'pandas','sklearn'], 
+   install_requires=['numpy', 'pandas'], 
 )
